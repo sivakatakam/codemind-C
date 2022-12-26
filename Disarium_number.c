@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int n,cn,r,d=0,rev=0,r1,s=0,c=0;
+    scanf("%d",&n);
+    cn=n;
+    while(n!=0)
+    {
+        r=n%10;
+        n=n/10;
+        rev=rev*10+r;
+    }
+    while(rev!=0)
+    {
+        r1=rev%10;
+        d++;
+        if(r1!=0)
+        {
+            c++;
+        }
+        s=s+pow(r1,d);
+        rev=rev/10;
+    }
+    if(s==cn)
+    {
+        printf("True");
+    }
+    else
+    {
+        printf("False");
+    }
+}
